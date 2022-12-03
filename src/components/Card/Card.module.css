@@ -1,4 +1,4 @@
-.contenedorCard{
+.contenedorCard {
   width: 200px;
   height: 285px;
   display: flex;
@@ -11,13 +11,14 @@
   gap: 5px;
 }
 
-.contenedorCard:hover{
+.contenedorCard:hover {
   transform: scale(1.1);
 }
 
-.contenedorCard::before{
-  content:"";
-  box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37);
+.contenedorCard::before {
+  content: '';
+  box-shadow: 0px 8px 32px 0px
+    rgba(31, 38, 135, 0.37);
   border-radius: 10px;
   background-color: rgba(155, 241, 15, 0.483);
   position: absolute;
@@ -26,7 +27,7 @@
   transform: translateZ(-2px);
 }
 
-.contenedorCard button{
+.contenedorCard button {
   width: 30px;
   height: 30px;
   background-color: rgb(180, 235, 0);
@@ -41,12 +42,12 @@
   cursor: pointer;
 }
 
-.contenedorCard button:hover{
+.contenedorCard button:hover {
   background-color: red;
   transform: scale(1.1);
 }
 
-.contenedorCard img{
+.contenedorCard img {
   width: 150px;
   height: 150px;
   background-color: chartreuse;
@@ -56,34 +57,41 @@
   font-size: 15px;
 }
 
-.contenedorCard h1{
+.contenedorCard h1 {
   font-size: 23px;
   color: rgb(243, 243, 243);
 }
 
-.contenedorCard h2{
+.contenedorCard h2 {
   background-color: rgb(161, 224, 13);
   width: 65px;
   border-radius: 10px;
   font-size: 15px;
 }
 
-.description{
+.description {
   display: flex;
   gap: 15px;
 }
 
-.animationAparecer{
+.animationAparecer {
   animation: animationItems 800ms ease;
 }
 
-.eliminar{
+.eliminar {
   opacity: 0;
   display: none;
 }
 
 @keyframes animationItems {
-  0% {transform: scale(0); opacity: 0;}
-  10% {opacity: 1;}
-  100% {transform: scale(1);}
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
