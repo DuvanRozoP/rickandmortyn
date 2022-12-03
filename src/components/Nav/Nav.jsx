@@ -7,7 +7,6 @@ export default function Nav(props) {
     <div className={styles.containerNavBar}>
       <SearchBar
         onSearch={(id) => {
-          console.log(id);
           onsearch(id);
         }}
       />

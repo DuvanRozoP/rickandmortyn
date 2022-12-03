@@ -1,22 +1,30 @@
 //import { useState } from 'react';
+import { useState } from 'react';
 import style from './SearchBar.module.css';
 
 export default function SearchBar(props) {
   const { onSearch } = props;
-  let input = '';
+  const [text, setText] = useState('');
   return (
     <div>
       {
         <>
           <input
             onChange={(data) => {
-              input = data.target.value;
+              setText(data.target.value);
             }}
+            value={text}
             placeholder='Ingrese info...'
             className={style.input}
             type='search'
           />
-          <button onClick={() => onSearch(input)} className={style.button}>
+          <button
+            onClick={() => {
+              setText('');
+              onSearch(text);
+            }}
+            className={style.button}
+          >
             Buscar
           </button>
         </>
