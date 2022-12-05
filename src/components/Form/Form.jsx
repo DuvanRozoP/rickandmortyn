@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import validate from '../../services/validate';
 import styles from './Form.module.css';
-import validationAcount from '../../services/simulationAcount';
 
-export default function Form() {
+export default function Form(props) {
+  // *Styles
   const {
     danger,
     warning,
@@ -17,7 +16,12 @@ export default function Form() {
     requisitosPassword,
   } = styles;
 
+  // *Props
+  const { login } = props;
 
+  // TODO: misma funcion ejecutada 2 veces
+
+  // *useState
   const [userData, setUserData] = useState({
     username: '',
     password: '',
@@ -26,6 +30,8 @@ export default function Form() {
     username: '',
     password: '',
   });
+
+  // *handleFunctions
   const handleForm = (event) => {
     setUserData({
       ...userData,
@@ -55,6 +61,10 @@ export default function Form() {
       alert('Debes corregir los errores');
     }
   };
+  const handleValidate = () => {
+    login(userData,setErrors);
+  };
+
   return (
     <div className={contenedor}>
       <form
@@ -97,14 +107,13 @@ export default function Form() {
         >
           {errors.password}
         </p>
-        <Link to='/home'>
-          <button
-            className={buttonStyle}
-            type='submit'
-          >
-            Login
-          </button>
-        </Link>
+        <button
+          className={buttonStyle}
+          type='submit'
+          onClick={handleValidate}
+        >
+          Login
+        </button>
       </form>
     </div>
   );
