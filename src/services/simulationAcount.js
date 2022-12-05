@@ -2,16 +2,14 @@ const usuario = 'DuvanRozo@gmail.com';
 const contrasena = '12345678*';
 
 export default function validationAcount(
-  user,
-  password
+  userData
 ) {
   const errors = {};
 
-  if (usuario !== user)
-    errors.username = 'usuario incorrecto';
+  if (userData.username !== usuario)
+    errors.username = 'Usuario invalido';
 
-  if (contrasena !== password)
-    errors.password = 'contrasena incorrecta';
-
+  if (userData.password !== contrasena)
+    errors.password = 'Contrasena invalida';
   return errors;
 }
