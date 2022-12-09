@@ -17,7 +17,7 @@ import Form from './components/Form/Form.jsx';
 import './App.css';
 
 // *Services
-import validationAcount from './services/simulationAcount';
+import validate from './services/validate';
 
 // *Component App
 function App() {
@@ -56,7 +56,7 @@ function App() {
     );
   };
   const login = (userData, setErrors) => {
-    const response = validationAcount(userData);
+    const response = validate(userData);
     if (Object.values(response).length === 0) {
       setAccess(true);
       navigate('/home');

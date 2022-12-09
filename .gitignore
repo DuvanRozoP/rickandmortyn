@@ -14,6 +14,12 @@
 #tareas
 /integracion
 
+#files external
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc
+
 # misc
 .DS_Store
 .env.local

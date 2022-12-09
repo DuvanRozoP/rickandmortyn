@@ -2,7 +2,14 @@ import { useState } from 'react';
 import validate from '../../services/validate';
 import styles from './Form.module.css';
 
+// *diretives
+import directivesAnimations from '../../directives/animation.module.css';
+
 export default function Form(props) {
+  // *Directivas
+  const { animations, animationItem } =
+    directivesAnimations;
+
   // *Styles
   const {
     danger,
@@ -18,8 +25,6 @@ export default function Form(props) {
 
   // *Props
   const { login } = props;
-
-  // TODO: misma funcion ejecutada 2 veces
 
   // *useState
   const [userData, setUserData] = useState({
@@ -44,6 +49,7 @@ export default function Form(props) {
       })
     );
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const array = Object.values(errors);
@@ -62,13 +68,14 @@ export default function Form(props) {
     }
   };
   const handleValidate = () => {
-    login(userData,setErrors);
+    login(userData, setErrors);
   };
-
   return (
-    <div className={contenedor}>
+    <div
+      className={`${contenedor} ${animations}`}
+    >
       <form
-        className={form}
+        className={`${form}`}
         onSubmit={handleSubmit}
       >
         <label className={label}>Usuario</label>
@@ -78,10 +85,11 @@ export default function Form(props) {
           value={userData.username}
           onChange={handleForm}
           placeholder='Escribe tu usuario'
-          className={
-            inputStyle ||
-            (errors.username && warning)
-          }
+          className={`
+            ${
+              inputStyle ||
+              (errors.username && warning)
+            } ${animationItem}}`}
         />
         <p
           className={`${danger} ${requisitosUsuario}`}

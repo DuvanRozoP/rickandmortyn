@@ -1,0 +1,32 @@
+.animations {
+  animation: animationContainer 1s ease;
+}
+
+.animationItem {
+  animation-delay: 1s;
+  animation: animationItems 500ms ease;
+}
+
+@keyframes animationItems {
+  0% {
+    transform: translateZ(10px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(10px);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animationContainer {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
