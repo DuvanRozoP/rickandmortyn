@@ -1,4 +1,4 @@
-// *React
+// ! React
 import { useEffect, useState } from 'react';
 import {
   Routes,
@@ -7,19 +7,19 @@ import {
   useNavigate,
 } from 'react-router-dom';
 
-// *Pages
+// ~ Componets
 import Cards from './components/Cards/Cards.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Nav from './components/Nav/Nav.jsx';
 import Form from './components/Form/Form.jsx';
 
-// *css
+// * css
 import './App.css';
 
-// *Services
-import validate from './services/validate';
+// & Services
+import validate from './services/validate.js';
 
-// *Component App
+// ~ Component App
 function App() {
   const [characters, setCharacters] = useState(
     []

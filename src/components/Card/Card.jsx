@@ -1,11 +1,12 @@
 import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
 
-// *diretives
+// & diretives
 import directivesAnimations from '../../directives/animation.module.css';
 
 export default function Card(props) {
-  // *Directivas
+  
+  // & Directivas
   const { animations, animationItem } =
     directivesAnimations;
 
