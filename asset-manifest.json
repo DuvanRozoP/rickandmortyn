@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rickandmortyn/static/css/main.63c3a903.css",
+    "main.js": "/rickandmortyn/static/js/main.39fada8d.js",
+    "static/media/background.png": "/rickandmortyn/static/media/background.f7dd1cae161b987e7854.png",
+    "index.html": "/rickandmortyn/index.html",
+    "main.63c3a903.css.map": "/rickandmortyn/static/css/main.63c3a903.css.map",
+    "main.39fada8d.js.map": "/rickandmortyn/static/js/main.39fada8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63c3a903.css",
+    "static/js/main.39fada8d.js"
+  ]
+}
